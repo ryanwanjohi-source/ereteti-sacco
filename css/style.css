@@ -1,0 +1,15 @@
+/* Lab 3 — the message under a field, and the border on a field that
+   failed its check. --pink is defined here because it was not defined
+   anywhere in the site CSS. */
+
+:root {
+  --pink: #d81b60;
+}
+
+.message {
+  color: var(--pink);
+}
+
+input.invalid {
+  border: 2px solid var(--pink);
+}
