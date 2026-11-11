@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ereteti Dairy Sacco</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Ereteti Dairy Sacco</h1>
+
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="routes.html">Our routes</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="register.html">Join</a></li>
+<li><a href="deliveries.html">Deliveries</a></li>
+</ul>
+</nav>
+<h1> Deliveries </h1>
+
+  <p> Milk received at the Olepolos centre on the Kiserian route
+Monday 12 October 2026. <br> Both sessions are listed: the
+morning collection from 6.30am and the evening collection
+from 4.00pm. </p>
+   
+<main>
+<h2>Record a delivery</h2>
+
+<form id="delivery-form">
+<label for="member">Member number</label>
+<input type="text" id="member" name="member" placeholder="ER-0001">
+<p id="member-message" class="message"></p>
+
+<label for="litres">Litres</label>
+<input type="text" id="litres" name="litres">
+<p id="litres-message" class="message"></p>
+
+<label for="session">Session</label>
+<select id="session" name="session" required>
+<option value="">Choose a session</option>
+<option value="Morning">Morning</option>
+<option value="Evening">Evening</option>
+</select>
+
+<button type="submit">Record delivery</button>
+<p id="form-message" class="message"></p>
+</form>
+
+<table>
+<caption> Milk received, Monday 12 October 2026 </caption>
+
+<thead>
+<tr>
+<th scope="col">Member</th>
+<th scope="col">Farmer</th>
+<th scope="col">Session</th>
+<th scope="col">Litres</th>
+<th scope="col">Accepted</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ER-0001</td>
+<td>Peter Mwangi</td>
+<td>Morning</td>
+<td>5.38</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>ER-0001</td>
+<td>Peter Mwangi</td>
+<td>Evening</td>
+<td>4.29</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>ER-0002</td>
+<td>Grace Wanjikui</td>
+<td>Morning</td>
+<td>4.39</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>ER-0002</td>
+<td>Grace Wanjikui</td>
+<td>Evening</td>
+<td>3.02</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>ER-0003</td>
+<td>Joseph Kamau</td>
+<td>Morning</td>
+<td>7.73</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>ER-0003</td>
+<td>Joseph Kamau</td>
+<td>Evening </td>
+<td>6.75</td>
+<td>Yes</td>
+</tr>
+
+</tbody>
+
+<tfoot>
+<tr>
+<th colspan="4" scope="row">Accepted today</th>
+<td id="accepted-total">23.83</td>
+</tr>
+</tfoot>
+
+</table>
+
+ <p> Joseph Kamau's morning load failed the alcohol test and was
+ rejected, so it is not counted in the day's total.<br> It is
+ still listed: a rejected load is recorded, never deleted,
+ because the farmer has a right to see what happened to
+ their milk. </p>
+
+</main>
+<footer>
+<p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
+<p>Site built by Wanjiru Kiarie, DBT Year 1, 2026.</p>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
