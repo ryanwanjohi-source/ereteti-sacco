@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Apply for membership - Ereteti Dairy Sacco </title>    
+</head>
+<body>
+<header>
+<h1>Ereteti Dairy Sacco</h1>
+
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="routes.html">Our routes</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="register.html">Join</a></li>
+<li><a href="deliveries.html">Deliveries</a></li>
+</ul>
+</nav>
+
+<h1> Apply for membership </h1>
+
+<main>
+
+  <p> Any dairy farmer within reach of one of our three routes
+ may apply to join Ereteti. <br>You will need your national ID
+ number and a phone we can reach you on. <br> Once your
+ membership number is issued you may deliver from that day,
+ and you are paid once a month for the litres we accept. </p>
+   
+<form action="#" method="post"></form>
+
+<fieldset>
+<legend>Your details</legend>
+<label for="first-name">First name</label>
+<input type="text" id="first-name" name="first_name" required><br>
+<label for="last-name">Last name</label>
+<input type="text" id="last-name" name="last_name" required><br>
+<label for="national-id">National ID number</label>
+<input type="text" id="national-id" name="national_id" required><br>
+<label for="phone">Phone number</label>
+<input type="tel" id="phone" name="phone" pattern="07[0-9]{8}"
+                                          title="Ten digits, starting 07" 
+                                          placeholder="07XXXXXXXX" required>
+</fieldset>
+ 
+<fieldset>
+<legend>Your route</legend>
+<label for="route">Route</label>
+<select id="route" name="route" required>
+<option value="">Choose a route</option>
+<option value="1">Kiserian route</option>
+<option value="2">Ngong route</option>
+<option value="3">Rongai route</option>
+</select><br>
+<label for="date-joined">Date of joining</label> 
+<input type="date" id="date-joined" name="date_joined"
+value="2026-09-24" required>
+</fieldset>
+
+<label for="rules">
+<input type="checkbox" id="rules" name="rules" required>
+I accept the sacco's rules
+</label><br>
+<button type="submit">Apply to join</button>
+
+</main>
+<footer>
+<p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
+<p>Site built by Wanjiru Kiarie, DBT Year 1, 2026.</p>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
