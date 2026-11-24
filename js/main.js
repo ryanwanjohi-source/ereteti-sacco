@@ -56,7 +56,7 @@ function checkMember() {
   if (memberPattern.test(memberValue)) {
     return true;
   } else {
-    showMessage('Enter a 4-digit member number.');
+    showMessage('A member number looks like ER-0001.');
     return false;
   }
 }
@@ -65,29 +65,27 @@ function checkMember() {
 if (member) member.addEventListener('input', checkMember);
 
 // ---- 3. deliveries.html: check the delivery form
+// Lab 6: the form now has somewhere to go (process-delivery.php), so it is
+// stopped only when something is wrong. A correct form goes through to PHP.
 
 const deliveryForm = document.querySelector('#delivery-form');
 const formMessage = document.querySelector('#form-message');
 
+function recordDelivery(event) {
+  checkMember();
+  checkLitres();
+  if (member.classList.contains('invalid')) {
+    event.preventDefault(); // stop: the member number is wrong
+    member.focus();
+  } else if (litres.classList.contains('invalid')) {
+    event.preventDefault(); // stop: the litres are wrong
+    litres.focus();
+  }
+  // nothing wrong: the form goes on to process-delivery.php
+}
+
 if (deliveryForm) {
-  deliveryForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    checkMember();
-    if (member.classList.contains('invalid')) {
-      member.focus();
-      return;
-    }
-
-    if (!checkLitres()) {
-      litres.focus();
-      return;
-    }
-
-    formMessage.textContent = 'Checked: ' + member.value + ', ' +
-      litres.value + ' litres. Nothing is sent yet: ' +
-      'that needs a server.';
-  });
+  deliveryForm.addEventListener('submit', recordDelivery);
 }
 
 // ---- 4. routes.html: filter the routes
@@ -126,7 +124,7 @@ function showTotal() {
 
   rows.forEach(function (row) {
     const cells = row.querySelectorAll('td');
-    if (cells[4].textContent.trim() === 'Yes') {
+    if (cells.length > 4 && cells[4].textContent === 'Yes') {
       total += Number(cells[3].textContent);
     }
   });
