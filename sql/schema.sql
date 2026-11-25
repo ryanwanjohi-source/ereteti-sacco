@@ -1,9 +1,0 @@
-CREATE DATABASE ereteti_sacco CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE ereteti_sacco;
-CREATE TABLE members (
- id INT AUTO_INCREMENT PRIMARY KEY,
- first_name VARCHAR(50) NOT NULL,
- phone VARCHAR(20) NOT NULL,
- route_id INT NOT NULL,
- created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
